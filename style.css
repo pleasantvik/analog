@@ -1,0 +1,185 @@
+:root {
+  --color-primary: #55c57a;
+  --color-primary-light: #7ed56f;
+  --color-primary-dark: #28b485;
+  --color-grey-dark: #777;
+  --color-grey-light-1: #f7f7f7;
+  --color-white: #fff;
+  --color-black: #000;
+  /* --rotation: 0; */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  position: relative;
+}
+
+.clock::after {
+  background-color: #000;
+  position: absolute;
+  content: "";
+  z-index: 50;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.number {
+  --rotation: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 2.4rem;
+  /* background-color: red; */
+
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+.number1 {
+  --rotation: 30deg;
+}
+
+.number2 {
+  --rotation: 60deg;
+}
+.number3 {
+  --rotation: 90deg;
+}
+.number4 {
+  --rotation: 120deg;
+}
+.number5 {
+  --rotation: 150deg;
+}
+.number6 {
+  --rotation: 180deg;
+}
+.number7 {
+  --rotation: 210deg;
+}
+.number8 {
+  --rotation: 240deg;
+}
+.number9 {
+  --rotation: 270deg;
+}
+.number10 {
+  --rotation: 300deg;
+}
+.number11 {
+  --rotation: 330deg;
+}
+.number12 {
+  /* --rotation:360deg; */
+}
+
+.hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+
+  transform-origin: bottom;
+  background-color: #000;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border: 1px solid #fff;
+  z-index: 5;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.sec {
+  height: 45%;
+  width: 0.3rem;
+  background-color: red;
+}
+.min {
+  height: 40%;
+  width: 0.7rem;
+  background-color: #000;
+}
+.hour {
+  height: 35%;
+  width: 1rem;
+  background-color: #000;
+}
+
+.span1 {
+  transform: rotate(-30deg) !important;
+  display: block;
+}
+
+.span2 {
+  transform: rotate(-60deg) !important;
+  display: block;
+}
+.span3 {
+  transform: rotate(-90deg) !important;
+  display: block;
+}
+.span4 {
+  transform: rotate(-120deg) !important;
+  display: block;
+}
+.span5 {
+  transform: rotate(-150deg) !important;
+  display: block;
+}
+.span6 {
+  transform: rotate(180deg) !important;
+  display: block;
+}
+.span7 {
+  transform: rotate(-210deg) !important;
+  display: block;
+}
+.span8 {
+  transform: rotate(-240deg) !important;
+  display: block;
+}
+.span9 {
+  transform: rotate(-270deg) !important;
+  display: block;
+}
+.span10 {
+  transform: rotate(-300deg) !important;
+  display: block;
+}
+.span11 {
+  transform: rotate(-330deg) !important;
+  display: block;
+}
